@@ -1,0 +1,3 @@
+{
+  "_comentario": "Archivo de EJEMPLO sin credenciales. Descarga tu google-services.json real desde Firebase Console, guárdalo como app/google-services.json (está en .gitignore) y NO lo subas a GitHub."
+}

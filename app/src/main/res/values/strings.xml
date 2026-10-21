@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GeoRegistro</string>
+
+    <string name="titulo_registro">Registrar incidencia</string>
+    <string name="titulo_listado">Historial de incidencias</string>
+    <string name="titulo_mapa">Mapa de incidencias</string>
+    <string name="titulo_sensor">Sensor de movimiento</string>
+
+    <string name="btn_registrar">Registrar incidencia</string>
+    <string name="btn_listado">Ver historial</string>
+    <string name="btn_mapa">Ver mapa</string>
+    <string name="btn_sensor">Detector de movimiento</string>
+
+    <string name="hint_titulo">Título *</string>
+    <string name="hint_descripcion">Descripción *</string>
+    <string name="label_categoria">Categoría *</string>
+    <string name="hint_fecha_hora">Fecha y hora</string>
+    <string name="btn_ubicacion">Obtener ubicación actual</string>
+    <string name="hint_latitud">Latitud *</string>
+    <string name="hint_longitud">Longitud *</string>
+    <string name="btn_guardar">Guardar</string>
+
+    <string name="err_campo_obligatorio">Campo obligatorio</string>
+    <string name="err_coordenadas">Obtén la ubicación o ingresa coordenadas válidas</string>
+    <string name="msg_guardado">Incidencia guardada</string>
+    <string name="msg_error_red">No se pudo conectar con el servidor. Revisa tu conexión e inténtalo de nuevo.</string>
+    <string name="msg_sin_datos">Aún no hay incidencias registradas</string>
+    <string name="msg_sin_incidencias_mapa">No hay incidencias para mostrar en el mapa</string>
+
+    <string name="msg_permiso_denegado">Permiso de ubicación denegado. Puedes ingresar las coordenadas manualmente.</string>
+    <string name="msg_permiso_explicacion">GeoRegistro usa tu ubicación para georreferenciar la incidencia.</string>
+    <string name="msg_gps_desactivado">No se pudo obtener la ubicación. Activa el GPS e inténtalo de nuevo.</string>
+    <string name="msg_ubicacion_ok">Ubicación obtenida</string>
+
+    <string name="msg_sin_acelerometro">Este dispositivo no tiene acelerómetro</string>
+    <string name="msg_movimiento">¡Movimiento detectado!</string>
+    <string name="msg_quieto">Sin movimiento</string>
+
+    <string-array name="categorias">
+        <item>Infraestructura</item>
+        <item>Seguridad</item>
+        <item>Ambiental</item>
+        <item>Agrícola</item>
+        <item>Otra</item>
+    </string-array>
+</resources>
