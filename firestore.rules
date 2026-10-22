@@ -1,0 +1,30 @@
+rules_version = '2';
+
+// Reglas de Cloud Firestore para GeoRegistro (RF08).
+// Solo se permite leer y CREAR incidencias con la estructura esperada.
+// No se permite modificar ni borrar, y todo lo demás queda denegado.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function esIncidenciaValida(d) {
+      return d.keys().hasOnly(['titulo', 'descripcion', 'categoria', 'fechaHora', 'latitud', 'longitud'])
+        && d.titulo is string && d.titulo.size() > 0 && d.titulo.size() <= 120
+        && d.descripcion is string && d.descripcion.size() > 0 && d.descripcion.size() <= 1000
+        && d.categoria is string && d.categoria.size() <= 40
+        && d.fechaHora is int
+        && d.latitud is number && d.latitud >= -90 && d.latitud <= 90
+        && d.longitud is number && d.longitud >= -180 && d.longitud <= 180;
+    }
+
+    match /incidencias/{id} {
+      allow read: if true;
+      allow create: if esIncidenciaValida(request.resource.data);
+      allow update, delete: if false;
+    }
+
+    // Cualquier otra ruta queda cerrada
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
